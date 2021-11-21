@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(120deg, #4398db, tomato);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  font-family: sans-serif;
+}
+.form-design {
+  position: relative;
+  max-width: 300px;
+  height: auto;
+  background: #ddd;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+}
+.form-design h2 {
+  border-bottom: 1px solid #444;
+  text-align: center;
+  padding: 15px 0px;
+}
+.form-design form {
+  padding: 25px;
+}
+.input-filed {
+  width: 100%;
+  position: relative;
+  margin: 25px 0px;
+  border-bottom: 2px solid #222;
+}
+.input-filed input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: none;
+  padding: 0px 5px;
+}
+.input-filed label {
+  font-size: 16px;
+  color: #adadad;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+.input-filed span::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #3498db;
+  left: 0;
+  top: 40px;
+  transition: all 0.3s ease;
+}
+.input-filed input:focus ~ label,
+.input-filed input:valid ~ label {
+  top: -5px;
+  color: #4398db;
+}
+.input-filed input:focus ~ span::before {
+  width: 100%;
+}
+input[type="submit"] {
+  width: 100%;
+  border: 1px solid #444;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 18px;
+  font-weight: 700;
+  background: #4398db;
+  color: #ddd;
+  cursor: pointer;
+}
